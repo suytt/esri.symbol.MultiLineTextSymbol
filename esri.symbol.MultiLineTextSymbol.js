@@ -1,4 +1,4 @@
-require(["esri/symbols/TextSymbol"], function(ts)
+require(["esri/symbols/TextSymbol", "dojox/gfx/svg"], function(ts, svg)
 {
 	if( typeof dojox.gfx.svg.Text.prototype.setShape == 'function' )
 	{
