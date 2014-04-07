@@ -7,7 +7,7 @@ Just include the JS file and proceed as usual with the [text symbol](https://dev
 
 `new TextSymbol("Multi-Line \n Text")`
 
-This patch is derived from the [Dojo Ticket #10973](https://bugs.dojotoolkit.org/ticket/10973) (4 years old... but will hopefully be included in dojo 2.0)
+This patch is derived from the [Dojo Ticket #10973](https://bugs.dojotoolkit.org/ticket/10973) (4 years old... but will hopefully be included in [dojo 2.0](https://bugs.dojotoolkit.org/milestone/2.0))
 
 
 Example
