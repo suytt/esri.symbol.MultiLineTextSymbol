@@ -22,6 +22,9 @@ require(["esri/symbols/TextSymbol", "dojox/gfx/svg"], function(ts, svg)
 			{ 
 				var texts = s.text.split("\n");
 				var lineHeight = 1.1 * parseInt(document.defaultView.getComputedStyle(r, "").getPropertyValue("font-size"), 10); 
+				if( isNaN(lineHeight) || !isFinite(lineHeight) )
+					lineHeight = 15;
+					
 				for(var i = 0, n = texts.length; i < n; i++)
 				{ 
 					var tspan = (document.createElementNS ? document.createElementNS(dojox.gfx.svg.xmlns.svg, "tspan") : document.createElement("tspan"));
