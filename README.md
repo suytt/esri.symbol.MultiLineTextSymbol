@@ -7,7 +7,7 @@ Just include the JS file and proceed as usual with the [text symbol](https://dev
 
 `new TextSymbol("Multi-Line \n Text")`
 
-This patch is derived from the [Dojo Ticket #10973](https://bugs.dojotoolkit.org/ticket/10973) (4 years old... but will hopefully be included in [dojo 2.0](https://bugs.dojotoolkit.org/milestone/2.0))
+This patch is derived from the [Dojo Ticket #10973](https://bugs.dojotoolkit.org/ticket/10973) (5 years old... but will hopefully be included in [dojo 2.0](https://bugs.dojotoolkit.org/milestone/2.0))
 
 
 Example
@@ -20,13 +20,13 @@ Example
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
     <title>Simple Map</title>
-    <link rel="stylesheet" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.13/esri/css/esri.css">
     <style>
         html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; }
         body { background-color: #FFF; overflow: hidden; font-family: "Trebuchet MS"; }
     </style>
-    <script src="http://js.arcgis.com/3.8/"></script>
-    <script src="https://raw.githubusercontent.com/Chaussette/esri.symbol.MultiLineTextSymbol/master/esri.symbol.MultiLineTextSymbol.js"></script>
+    <script src="https://js.arcgis.com/3.13/"></script>
+    <script src="https://raw.githubusercontent.com/suytt/esri.symbol.MultiLineTextSymbol/master/esri.symbol.MultiLineTextSymbol.js"></script>
     <script>
     var map;
     require(["esri/map", "esri/symbols/TextSymbol", "esri/graphic", "esri/geometry/Point", "dojo/domReady!"], 
