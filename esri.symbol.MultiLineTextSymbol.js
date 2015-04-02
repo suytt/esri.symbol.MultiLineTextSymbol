@@ -1,3 +1,17 @@
+require(["esri/layers/LabelLayer"], function(ll)
+{
+	if( typeof esri.layers.LabelLayer.prototype._addLabel == 'function' )
+	{
+		esri.layers.LabelLayer.prototype._addLabel2 = esri.layers.LabelLayer.prototype._addLabel;
+		esri.layers.LabelLayer.prototype._addLabel = function(a,b,c,e,g,k,m)
+		{
+			// replace \n by <br>
+			a = a.replace(/\n/g, "<br />");
+			this._addLabel2(a,b,c,e,g,k,m);
+		}
+	}
+});
+
 require(["esri/symbols/TextSymbol", "dojox/gfx/svg"], function(ts, svg)
 {
 	if( typeof dojox.gfx.svg.Text.prototype.setShape == 'function' )
@@ -20,7 +34,7 @@ require(["esri/symbols/TextSymbol", "dojox/gfx/svg"], function(ts, svg)
 
 			if(s.text)
 			{ 
-				var texts = s.text.split("\n");
+				var texts = s.text.replace(/<br\s*\/?>/ig, "\n").split("\n");
 				var lineHeight = 1.1 * parseInt(document.defaultView.getComputedStyle(r, "").getPropertyValue("font-size"), 10); 
 				if( isNaN(lineHeight) || !isFinite(lineHeight) )
 					lineHeight = 15;
