@@ -42,7 +42,7 @@ require(["esri/symbols/TextSymbol", "dojox/gfx/svg"], function(ts, svg)
 				for(var i = 0, n = texts.length; i < n; i++)
 				{ 
 					var tspan = (document.createElementNS ? document.createElementNS(dojox.gfx.svg.xmlns.svg, "tspan") : document.createElement("tspan"));
-					tspan.setAttribute("dy", i ? lineHeight : -(texts.length-1)*lineHeight/2); 
+					tspan.setAttribute("dy", i ? lineHeight : ""; 
 					tspan.setAttribute("x", s.x);
 					tspan.appendChild((dojox.gfx.useSvgWeb ? document.createTextNode(texts[i], true) : document.createTextNode(texts[i]))); 
 					r.appendChild(tspan);
